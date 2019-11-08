@@ -115,7 +115,7 @@
   },
   "license": "Apache-2.0",
   "main": "bundle/twilio-flex.prod.js",
-  "name": "flex-ui",
+  "name": "@falabella-labs/flex-ui",
   "private": false,
   "scripts": {
     "build:dev": "webpack --env=dev --progress --colors",
