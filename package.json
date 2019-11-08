@@ -176,5 +176,8 @@
     "test": "jest --maxWorkers=2 --detectOpenHandles --forceExit"
   },
   "types": "src/index.d.ts",
-  "version": "1.14.1"
+  "version": "1.14.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
