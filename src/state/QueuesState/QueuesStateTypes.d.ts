@@ -5,6 +5,7 @@ export interface QueuesStateInterface {
     hasFetchedList: boolean;
     workspaceStats?: WorkspaceStats;
     filter?: QueuesFilterFunction;
+    error?: Error;
 }
 /**
  * @typedef ActivityStatistic
@@ -50,7 +51,7 @@ export interface Queue {
  * @property {Object.<{ reserved: number, pending: number, assigned: number, wrapping: number }>} tasks_by_status
  * @property {number} total_tasks
  * @property {string|null} longest_task_waiting_sid
- * @property {number} longest_task_waiting_age
+ * @property {string|null} longest_task_waiting_from
  */
 export interface WorkerQueue extends Queue {
     friendly_name: string;
@@ -73,6 +74,7 @@ export declare const UPDATE_QUEUE = "FLEX_UPDATE_QUEUE";
 export declare const REMOVE_QUEUE = "FLEX_REMOVE_QUEUE";
 export declare const SET_WORKSPACE_STATS = "FLEX_SET_WORKSPACE_STATS";
 export declare const UPDATE_FILTER = "FLEX_UPDATE_QUEUES_FILTER";
+export declare const QUEUES_ERROR = "FLEX_QUEUES_ERROR";
 export declare type QueuesStateActionTypes = {
     type: typeof SET_QUEUES;
     payload: WorkerQueue[];
@@ -91,4 +93,7 @@ export declare type QueuesStateActionTypes = {
 } | {
     type: typeof UPDATE_FILTER;
     payload: QueuesFilterFunction;
+} | {
+    type: typeof QUEUES_ERROR;
+    payload: Error;
 };

@@ -10,6 +10,7 @@ import { ComponentBadgeProps, BadgePropsWithDefaultPropsAsOptional } from "../..
  * @property {boolean} [isActive] - Represents if current link is active.
  * @property {string} [activeView] - Represents the active view.
  * @property {ComponentBadgeProps<SideLink.SideLinkProps>} [Badge] - Set of properties for internal Badge element.
+ * @private
  */
 export interface SideLinkProps extends TaskContextProps {
     icon: string | React.ReactNode;
@@ -23,6 +24,7 @@ export interface SideLinkProps extends TaskContextProps {
 /**
  * @typedef {SideLink.SideLinkProps} SideLink.SideLinkChildrenProps
  * @property {BadgePropsWithDefaultPropsAsOptional} [Badge] - Set of properties for internal Badge element.
+ * @private
  */
 export interface SideLinkChildrenProps extends SideLinkProps {
     Badge?: BadgePropsWithDefaultPropsAsOptional;
@@ -31,6 +33,7 @@ export interface SideLinkChildrenProps extends SideLinkProps {
  * @typedef {SideLink.SideLinkItemChildrenProps} SideLink.SideLinkItemProps
  * @property {boolean} showLabel - Identifies if the label is shown.
  * @property {string} activeView - Represents the active view.
+ * @private
  */
 export interface SideLinkItemProps extends SideLinkItemChildrenProps {
     showLabel: boolean;
@@ -39,6 +42,7 @@ export interface SideLinkItemProps extends SideLinkItemChildrenProps {
 /**
  * @typedef SideLink.SideLinkItemChildrenProps
  * @property {ComponentBadgeProps<SideLink.SideLinkProps>} [Badge] - Set of properties for internal Badge element.
+ * @private
  */
 export interface SideLinkItemChildrenProps {
     Badge?: ComponentBadgeProps<SideLinkProps>;
@@ -46,6 +50,7 @@ export interface SideLinkItemChildrenProps {
 /**
  * @typedef {SideLink.SideLinkItemProps} SideLink.SideLinkQueuesStatsProps
  * @property {string} viewName - Represents the current view name.
+ * @private
  */
 export interface SideLinkQueuesStatsProps extends SideLinkItemProps {
     viewName: string;

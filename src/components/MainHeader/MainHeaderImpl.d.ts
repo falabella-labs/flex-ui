@@ -7,5 +7,6 @@ export declare const contentStore: DynamicContentStore;
 export declare class MainHeaderImpl extends React.PureComponent<PropsWithTheme<MainHeaderChildrenProps>> {
     render(): JSX.Element;
     private onSidebarButtonClick;
+    private onDialpadClick;
     private onSidebarButtonBlur;
 }

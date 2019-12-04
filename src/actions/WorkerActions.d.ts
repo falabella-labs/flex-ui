@@ -5,7 +5,7 @@ import { ConferenceParticipant } from "../state/ConferencesState";
  * @typedef WorkerActionPayload
  * @property {ITask} [task]
  * @property {string} [sid]
- * @memberof WorkerActions
+ * @memberof Actions
  */
 export interface WorkerActionPayload {
     task?: ITask;
@@ -13,10 +13,10 @@ export interface WorkerActionPayload {
 }
 /**
  * @package
- * @typedef {WorkerActions.WorkerActionPayload} TransferTaskPayload
+ * @typedef {Actions.WorkerActionPayload} TransferTaskPayload
  * @property {string} targetSid - sid of the worker or the queue to be transferred to
  * @property {any} [options] - transfer options (see Taskrouter docs for options)
- * @memberof WorkerActions
+ * @memberof Actions
  */
 export interface TransferTaskPayload extends WorkerActionPayload {
     targetSid: string;
@@ -24,10 +24,10 @@ export interface TransferTaskPayload extends WorkerActionPayload {
 }
 /**
  * @package
- * @typedef {WorkerActions.WorkerActionPayload} WorkerParticipantActionPayload
+ * @typedef {Actions.WorkerActionPayload} WorkerParticipantActionPayload
  * @property {string} [targetSid] - sid of the participant (either this or participant has to be provided)
  * @property {ConferenceParticipant} [participant] - participant object (either this or participant has to be provided)
- * @memberof WorkerActions
+ * @memberof Actions
  */
 export interface WorkerParticipantActionPayload extends WorkerActionPayload {
     targetSid?: string;
@@ -36,11 +36,11 @@ export interface WorkerParticipantActionPayload extends WorkerActionPayload {
 /**
  * @package
  * @typedef WorkerSetActivityPayload
- * @param {boolean} [activityAvailable]
- * @param {string} [activityName]
- * @param {string} [activitySid]
- * @param {boolean} [options.rejectPendingReservations]
- * @memberof WorkerActions
+ * @property {boolean} [activityAvailable]
+ * @property {string} [activityName]
+ * @property {string} [activitySid]
+ * @property {boolean} [options.rejectPendingReservations]
+ * @memberof Actions
  */
 export interface WorkerSetActivityPayload {
     activityAvailable?: boolean;
@@ -52,20 +52,35 @@ export interface WorkerSetActivityPayload {
 }
 /**
  * @package
- * @typedef WorkerLogoutPayload
- * @param {boolean} [forceLogout] - supress an error in case offline activity cannot be set for the worker
- * @param {string} [activitySid] - sid of the custom offline activity
+ * @typedef WorkerSetWorkerActivityPayload
+ * @param {string} [workerSid] - sid of the worker
  * @memberof WorkerActions
+ */
+export interface WorkerSetWorkerActivityPayload extends WorkerSetActivityPayload {
+    workerSid?: string;
+}
+/**
+ * @package
+ * @typedef WorkerLogoutPayload
+ * @property {boolean} [forceLogout] - supress an error in case offline activity cannot be set for the worker
+ * @property {string} [activitySid] - sid of the custom offline activity
+ * @memberof Actions
  */
 export interface WorkerLogoutPayload {
     forceLogout?: boolean;
     activitySid?: string;
 }
 /**
+ * @private
+ */
+export interface DeprecatedWorkerLogoutPayload extends WorkerLogoutPayload {
+    activityName?: string;
+}
+/**
  * @package
  * @typedef WorkerAcceptTaskActionPayload
  * @property {any} conferenceOptions
- * @memberof WorkerActions
+ * @memberof Actions
  */
 export interface WorkerAcceptTaskActionPayload extends WorkerActionPayload {
     conferenceOptions: any;
@@ -73,17 +88,18 @@ export interface WorkerAcceptTaskActionPayload extends WorkerActionPayload {
 export interface ToggleDTMFDialpadPayload extends WorkerActionPayload {
     open?: boolean;
 }
-export interface DTMFDIalpadDigitsPayload extends WorkerActionPayload {
+export interface DTMFDialpadDigitsPayload extends WorkerActionPayload {
     digits: string;
 }
 /**
  * @package
- * @class WorkerActions
+ * @interface Actions
  * @hideconstructor
  * @category Actions
  */
 export declare class WorkerActions {
     static registerActions(): void;
+    private static startOutboundCall;
     private static blockActionUntilReservationEvent;
     private static acceptTask;
     private static rejectTask;
@@ -91,6 +107,7 @@ export declare class WorkerActions {
     private static wrapupTask;
     private static selectTask;
     private static setActivity;
+    private static setWorkerActivity;
     private static transferTask;
     private static cancelTransfer;
     private static kickParticipant;
@@ -102,6 +119,7 @@ export declare class WorkerActions {
     private static updateWorkerParticipantActionPayload;
     private static updateAcceptTaskPayload;
     private static updateWorkerSetActivityPayload;
+    private static updateWorkerSetWorkerActivityPayload;
     private static logout;
 }
 export declare const isValidTaskPayload: (task: ITask) => (payload: any) => boolean;

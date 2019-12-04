@@ -4,7 +4,7 @@ import { Conference } from "./ConferencesState";
 import { ITask, IWorker } from "../models";
 /**
  * Worker state based on Worker SDK
- * @name WorkerState
+ * @interface WorkerState
  * @property {Map<string, ITask>} tasks map of active tasks by reservation SID
  * @property {Activity} activity current {@link https://twilio.github.io/twilio-taskrouter.js/Activity.html} of the worker
  * @property {Map<string, Activity>} activities map of all {@link https://twilio.github.io/twilio-taskrouter.js/Activity.html} instances by SID
@@ -49,6 +49,7 @@ export declare class WorkerListener {
     private handleAttributesUpdated;
     private handleWorkerReady;
     private handleReservationCreated;
+    private handleOutboundReservationCanceled;
     private handleReservationUpdated;
     private playSound;
     private handlePlayError;

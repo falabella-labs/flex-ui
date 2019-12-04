@@ -8,7 +8,6 @@ export interface QueuesDataTableImplProps {
     queuesList: Array<TaskQueueInterface>;
 }
 export declare class QueuesDataTableImpl extends React.PureComponent<Partial<QueuesDataTableImplProps & ThemeProps>> {
-    constructor(props: any);
     render(): JSX.Element;
     private getTaskQueueSid;
     private renderFriendlyName;

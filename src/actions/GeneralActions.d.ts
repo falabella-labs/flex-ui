@@ -3,7 +3,7 @@ import { ActiveFilter } from "../state/ViewState";
  * @package
  * @typedef {Object} SelectViewPayload
  * @property {string} viewName
- * @memberof GeneralActions
+ * @memberof Actions
  */
 export interface SelectViewPayload {
     viewName: string;
@@ -12,7 +12,7 @@ export interface SelectViewPayload {
  * @package
  * @typedef ToggleSidebarPayload
  * @property {boolean} [open]
- * @memberof GeneralActions
+ * @memberof Actions
  */
 export interface ToggleSidebarPayload {
     open?: boolean;
@@ -22,7 +22,7 @@ export interface ToggleSidebarPayload {
  * @typedef SetComponentStatePayload
  * @property {string} name
  * @property {any} state
- * @memberof GeneralActions
+ * @memberof Actions
  */
 export interface SetComponentStatePayload {
     name: string;
@@ -32,25 +32,20 @@ export interface SetComponentStatePayload {
  * @package
  * @typedef ApplyListFiltersPayload
  * @property {string} key
- * @property {ActiveFilter[]} filters
- * @memberof GeneralActions
+ * @property {TeamsView.ActiveFilter[]} filters
+ * @memberof Actions
  */
 export interface ApplyListFiltersPayload {
     key: string;
     filters: Array<ActiveFilter>;
 }
-/**
- * @package
- * @class GeneralActions
- * @hideconstructor
- * @category Actions
- */
 export declare class GeneralActions {
     static registerActions(): void;
     private static navigateToView;
     private static showDirectory;
     private static hideDirectory;
     private static toggleSidebar;
+    private static toggleOutboundDialer;
     private static setComponentState;
     private static applyListFilters;
     private static removeListFilters;

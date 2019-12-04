@@ -9,6 +9,7 @@ export declare class AgentDesktopViewImpl extends React.PureComponent<AgentDeskt
     private removeFilter;
     componentDidMount(): void;
     componentWillUnmount(): void;
+    componentDidUpdate(): void;
     private notificationFilter;
     private getTaskSidFromRoute;
     private handleSplitterNeedsUpdate;

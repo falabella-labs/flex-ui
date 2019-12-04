@@ -25,8 +25,11 @@ export declare type QueuesStatsViewChildProps = Omit<QueuesStatsViewImplProps, "
     theme: Theme;
 };
 /**
- * Renders the real-time queues dashboard
+ * Renders the real-time queues dashboard.
+ * This view can contain a button to bring it fullscreen. This functionality can be enabled via {@link FullscreenConfig} on the <code>QueuesStatsView.fullscreen</code> static property.
+ *
  * @alias QueuesStatsView
+ * @private see https://issues.corp.twilio.com/browse/FLEXUI-793 for more details on why its private
  * @component
  * @hideconstructor
  * @param {QueuesStatsView.QueuesStatsViewProps} props - QueuesStatsView props

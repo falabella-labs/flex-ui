@@ -2,17 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## 1.15.1
+
+### Fixed
+
+-   Insights login when SSO is not configured
+
+## 1.15.0
+
+### Added
+
+-   Created new Flex `SetWorkerActivity` action which is invoked when supervisor changes a workers status
+
+```
+Actions.invokeAction("SetWorkerActivity", { workerSid: "WKXXXXXXXXXXXXXXXXX", activitySid: "WAXXXXXXXXXXXXXXXXX" })
+```
+
+-   Introduced new task channel definition variable `channel.templates.TaskCanvasTabs.contentTabHeader` to have channel specific labels for task canvas tabs. `TaskTabAgentCallLabel` and `TaskTabAgentChatLabel` strings are no longer used.
+
+-   Introduced extra logs to identify potential stuck voice calls
+
+### Fixed
+
+-   TeamsView correctly renders even if TaskRouter skills array is not defined.
+
+-   Text in chat input box can be now correctly selected
 
 ## 1.14.1
+
+### Fixed
+
+-   `longest_task_waiting_age` is no longer getting updated and is removed from `WorkerQueue`. Using `longest_task_waiting_from` to calculate a task's age instead.
+
+-   Added feature flag for Markdown support
 
 ### Dependencies updated
 
 -   [twilio-taskrouter] to version 0.4.1
-
-### Fixed
-
--   Added feature flag for Markdown support
 
 ## 1.14.0
 
@@ -90,6 +116,12 @@ notifications: {
 ### Fixed
 
 -   Update 'How to configure' CRM docs link url
+
+## 1.13.2
+
+### Fixed
+
+-   `longest_task_waiting_age` is no longer getting updated and is removed from `WorkerQueue`. Using `longest_task_waiting_from` to calculate a task's age instead.
 
 ## 1.13.1
 

@@ -3,10 +3,11 @@ import { Manager } from "../core/Manager";
 import { SSOConfig } from "../core/SSOLoginHandler";
 /**
  * @module Flex
+ * @private
+ * @category Core
  */
 /**
  * Creates an instance FlexHelper that can be used to render Flex
- *
  * @param {Config} config configuration object
  * @returns {Promise<FlexHelper>} if Flex was successfully initialized
  */
@@ -48,8 +49,9 @@ export declare function runDefault(config?: Config, nodeOrSelector?: string | El
  */
 export declare function tryLogin(config?: SSOConfig): Promise<boolean>;
 /**
- * @classdesc Helper class to run flex
+ * Helper class to run flex
  * @package
+ * @private
  */
 declare class FlexHelper {
     private _manager;

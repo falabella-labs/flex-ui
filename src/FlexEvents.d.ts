@@ -4,34 +4,34 @@ import { SSOTokenPayload } from "./core/SSOLoginHandler.definitions";
 export declare enum FlexEvent {
     /**
      * Flex splitter resized
-     * @event FlexEventEmitter#flexSplitterResize
+     * @name FlexEventEmitter.flexSplitterResize
      */
     flexSplitterResize = "flexSplitterResize",
     /**
      * User logged in. Fired during @see {Manager} creation
-     * @event FlexEventEmitter#userLoggedIn
+     * @name FlexEventEmitter.userLoggedIn
      */
     userLoggedIn = "userLoggedIn",
     /**
      * Selected view changed
-     * @event FlexEventEmitter#selectedViewChanged
+     * @name FlexEventEmitter.selectedViewChanged
      * @param {string} newViewName name of the view
      */
     selectedViewChanged = "selectedViewChanged",
     /**
      * Token updated
-     * @event FlexEventEmitter#tokenUpdated
+     * @name FlexEventEmitter.tokenUpdated
      * @param {SSOTokenPayload} tokenPayload new token payload
      */
     tokenUpdated = "tokenUpdated",
     /**
      * Token expired
-     * @event FlexEventEmitter#tokenExpired
+     * @name FlexEventEmitter.tokenExpired
      */
     tokenExpired = "tokenExpired",
     /**
      * All plugins are loaded
-     * @event FlexEventEmitter#pluginsLoaded
+     * @name FlexEventEmitter.pluginsLoaded
      */
     pluginsLoaded = "pluginsLoaded"
 }
@@ -40,6 +40,7 @@ export declare enum FlexEvent {
  *
  * @extends {EventEmitter}
  * @category Core
+ * @private
  */
 export declare class FlexEventEmitter extends EventEmitter {
     emit(event: FlexEvent, ...args: Array<any>): boolean;

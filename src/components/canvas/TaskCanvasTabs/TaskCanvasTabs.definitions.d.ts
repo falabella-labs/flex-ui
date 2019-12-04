@@ -2,6 +2,7 @@ import { TaskCanvasChildrenProps } from "../TaskCanvas/TaskCanvas.definitions";
 /**
  * Properties of children in task canvas tabs.
  * @typedef {TaskCanvasTabs.TaskCanvasChildrenProps} TaskCanvasTabs.TaskCanvasTabsChildrenProps
+ * @property {boolean} [hasMarkdownSupport] - Whether markdown feature is enabled or not
  * @property {string} [selectedTabName] - Selected tab name.
  */
 export interface TaskCanvasTabsChildrenProps extends TaskCanvasChildrenProps {

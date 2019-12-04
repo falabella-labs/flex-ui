@@ -22,6 +22,8 @@ import { HistoryParams } from "./history";
  * );
  *
  * @param {History | HistoryType | HistoryParams} [arg] instance of History, type of a history (memory, browser) or parameters for getHistory() function
- * @category Core
+ * @category Core / State
+ * @method applyFlexMiddleware
+ * @memberof Store
  */
 export declare const applyFlexMiddleware: (arg?: "memory" | History<any> | "browser" | HistoryParams) => GenericStoreEnhancer;

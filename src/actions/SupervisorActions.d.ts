@@ -4,7 +4,7 @@ import { ITask, IWorker } from "../models";
  * @typedef SelectWorkerInSupervisorPayload
  * @property {IWorker} [worker]
  * @property {string} workerSid
- * @memberof SupervisorActions
+ * @memberof Actions
  */
 export interface SelectWorkerInSupervisorPayload {
     worker?: IWorker;
@@ -15,7 +15,7 @@ export interface SelectWorkerInSupervisorPayload {
  * @typedef TaskInSupervisorPayload
  * @property {ITask} [task]
  * @property {string} [sid]
- * @memberof SupervisorActions
+ * @memberof Actions
  */
 export interface TaskInSupervisorPayload {
     task?: ITask;
@@ -25,17 +25,11 @@ export interface TaskInSupervisorPayload {
  * @package
  * @typedef {TaskInSupervisorPayload} MonitorTaskPayload
  * @property {any} [extraParams]
- * @memberof SupervisorActions
+ * @memberof Actions
  */
 export interface MonitorTaskPayload extends TaskInSupervisorPayload {
     extraParams?: any;
 }
-/**
- * @package
- * @class SupervisorActions
- * @hideconstructor
- * @category Actions
- */
 export declare class SupervisorActions {
     static registerActions(): void;
     private static monitorCall;

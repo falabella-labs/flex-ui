@@ -1,23 +1,26 @@
 {
-  "_from": "@twilio/flex-ui@^1",
-  "_id": "@twilio/flex-ui@1.14.1",
+  "_from": "@twilio/flex-ui",
+  "_id": "@twilio/flex-ui@1.15.1",
   "_inBundle": false,
-  "_integrity": "sha512-iwsBxSwGQrm7MoH2k13o3c2t5DMKQ1ma+zJO+tEZa2c/vGfk423pOTW8Jk10DNVxXxb4doEPD7CTG9ifXr3+eg==",
+  "_integrity": "sha512-yUCwvn2Bm9gSMAQLiO6r5RjtMxTHNav6XvaJfH+ZE0tsntA0nPGhXgRWpJp2hDTXiQ2EuDwhw6v4ctfeZGLzFQ==",
   "_location": "/@twilio/flex-ui",
   "_phantomChildren": {
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "3.9.4",
     "@material-ui/icons": "2.0.3",
     "@types/loglevel": "1.6.3",
     "emotion": "9.2.6",
     "emotion-theming": "9.2.6",
-    "handlebars": "4.5.1",
+    "google-libphonenumber": "3.2.6",
+    "handlebars": "4.5.3",
     "hex-rgb": "3.0.0",
-    "hoist-non-react-statics": "3.3.0",
+    "hoist-non-react-statics": "3.3.1",
+    "lodash.debounce": "4.0.8",
     "loglevel": "1.6.6",
     "queue": "6.0.1",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-emotion": "9.2.6",
+    "react-hotkeys": "2.0.0",
     "react-redux": "5.1.2",
     "redux": "3.7.2",
     "redux-logger": "3.0.6",
@@ -27,23 +30,24 @@
     "uuid": "3.3.3"
   },
   "_requested": {
-    "type": "range",
+    "type": "tag",
     "registry": true,
-    "raw": "@twilio/flex-ui@^1",
+    "raw": "@twilio/flex-ui",
     "name": "@twilio/flex-ui",
     "escapedName": "@twilio%2fflex-ui",
     "scope": "@twilio",
-    "rawSpec": "^1",
+    "rawSpec": "",
     "saveSpec": null,
-    "fetchSpec": "^1"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@twilio/flex-ui/-/flex-ui-1.14.1.tgz",
-  "_shasum": "999cfe9038edecbef943704385abd95e246112e5",
-  "_spec": "@twilio/flex-ui@^1",
-  "_where": "/Users/tmayr/dev/plugin-outbound-messages",
+  "_resolved": "https://registry.npmjs.org/@twilio/flex-ui/-/flex-ui-1.15.1.tgz",
+  "_shasum": "0a12a8f7da6516a7cdd944d26f367244e9bd23ed",
+  "_spec": "@twilio/flex-ui",
+  "_where": "/Users/tmayr/dev",
   "author": {
     "name": "Twilio"
   },
@@ -51,11 +55,15 @@
     "@twilio/frame-ui"
   ],
   "dependencies": {
+    "@gooddata/gooddata-js": "^11.19.1",
     "@material-ui/core": "^3.9.3",
+    "@twilio/flex-insights-identity-client-js": "^2.0.5",
+    "@twilio/flex-insights-player": "^2.2.1",
     "@twilio/wfo-identity-client-flex": "^0.9.1",
     "@types/lodash.merge": "^4.6.6",
     "async-sema": "^3.0.0",
     "axios": "^0.19.0",
+    "core-js": "^2.6.9",
     "emotion": "9.2.6",
     "emotion-theming": "9.2.6",
     "eventemitter3": "^4.0.0",
@@ -82,7 +90,7 @@
     "twilio-chat": "~3.2",
     "twilio-client": "~1.9",
     "twilio-sync": "^0.11.0",
-    "twilio-taskrouter": "^0.4.1",
+    "twilio-taskrouter": "~0.4.1",
     "uuid": "^3.3.2"
   },
   "deprecated": false,
@@ -176,5 +184,5 @@
     "test": "jest --maxWorkers=2 --detectOpenHandles --forceExit"
   },
   "types": "src/index.d.ts",
-  "version": "1.14.1"
+  "version": "1.15.1"
 }

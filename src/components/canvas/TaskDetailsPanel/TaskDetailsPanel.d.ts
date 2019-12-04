@@ -6,7 +6,7 @@ import { TaskDetailsPanelProps } from "./TaskDetailsPanel.definitions";
  * @component
  * @hideconstructor
  * @param {TaskDetailsPanel.TaskDetailsPanelProps} props - Properties to be passed to configure this component.
- * @category Components / Basic
+ * @category Components / Programmable
  */
 export declare class TaskDetailsPanel extends React.PureComponent<TaskDetailsPanelProps> {
     private refreshTimer;

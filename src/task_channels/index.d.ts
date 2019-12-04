@@ -1,13 +1,8 @@
 /**
  * Default Flex task channel definitions
- * @typedef {object} FlexTaskChannels
- * @property {TaskChannelDefinition} Call call channel definition
- * @property {TaskChannelDefinition} Chat generic chat channel definition
- * @property {TaskChannelDefinition} ChatMessenger Messenger chat channel definition
- * @property {TaskChannelDefinition} ChatLine Line chat channel definition
- * @property {TaskChannelDefinition} ChatSms SMS chat channel definition
- * @property {TaskChannelDefinition} ChatWhatsApp WhatsApp chat channel definition
- * @property {TaskChannelDefinition} Default generic channel definition
+ * @class DefaultTaskChannels
+ * @category Framework / Channels
+ * @hideconstructor
  */
 export * from "./CallTaskChannels";
 export * from "./ChatTaskChannels";

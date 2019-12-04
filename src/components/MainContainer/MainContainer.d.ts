@@ -19,6 +19,7 @@ export interface MainContainerProps {
  */
 export interface MainContainerChildrenProps extends MainContainerProps {
     activeView?: string;
+    showOutboundDialer?: boolean;
 }
 /**
  * @classdesc This is a container for MainContainer.

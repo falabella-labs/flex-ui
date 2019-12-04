@@ -121,4 +121,4 @@ export declare type CreateSpy = (arg: {
  */
 export declare type SpyConfig = CreateSpy | SpyConfigurableOptions;
 declare type getSpyParams = SpyTypeOptions & ConstructorsOptions;
-export declare const getSpy: (options: getSpyParams) => Spy;
+export declare const getSpy: (options: getSpyParams) => void | Spy;

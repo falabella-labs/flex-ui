@@ -20,6 +20,7 @@ export declare const NotificationIds: {
     FlexSessionExpired: "FLEX_SESSION_EXPIRED";
     RequestBrowserNotificationPermissions: "RequestBrowserNotificationPermissions";
     IncomingTask: "IncomingTask";
+    OutboundCallCanceled: "OutboundCallCanceled";
     UNKNOWN: "UNKNOWN";
     NewChatMessage: "NewChatMessage";
 };

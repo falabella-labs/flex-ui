@@ -21,16 +21,28 @@ export interface ContextProviderProps extends FlexContextType {
 /**
  * Flex Context
  *
- * @const {React.Context<ContextProvider.FlexContextType>} FlexContext
- * @category Core
+ * @class FlexContext
+ * @param {ContextProvider.FlexContextType} props - props
+ * @category Framework
+ * @component
+ * @private
  */
 export declare const FlexContext: React.Context<FlexContextType>;
 /**
  * @classdesc Flex Context Provider component
- * @component
  * @hideconstructor
  * @param {ContextProvider.ContextProviderProps} props properties to be passed to configure this component.
- * @category Components / Context
+ * @category Framework / Context
+ * @example
+ * import { ContextProvider, RootContainer, Manager } from "@twilio/flex-ui";
+ * Manager.create(configuration).then(manager => {
+ *   ReactDOM.render(
+ *     <ContextProvider manager={manager}>
+ *       <RootContainer />
+ *     </ContextProvider>,
+ *     document.getElementById("container")
+ *   );
+ * });
  */
 export declare class ContextProvider extends React.PureComponent<ContextProviderProps> {
     componentWillMount(): void;

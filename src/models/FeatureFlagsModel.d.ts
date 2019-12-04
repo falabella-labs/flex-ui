@@ -4,7 +4,9 @@ export declare type FeatureEndpointResponse = {
 export declare enum FeatureFlag {
     TestFeature = "test-feature",
     TestPilotFeature = "test-pilot-feature",
-    MarkdownSupport = "markdown-support"
+    MarkdownSupport = "markdown-support",
+    FlexQueuesStats = "flex-queues-stats",
+    InsightsPlayer = "insights-player"
 }
 export declare enum FeatureStage {
     Private = "private",

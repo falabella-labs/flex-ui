@@ -28,7 +28,7 @@ export interface SideNavChildrenProps extends SideNavProps {
  * Can be themed with [theme.SideNav]
  * @component
  * @hideconstructor
- * @category Components / Basic
+ * @category Components / Programmable
  * @param {SideNav.SideNavProps} props - Properties to be passed to configure this component.
  */
 export declare class SideNav extends React.PureComponent<SideNavProps> {

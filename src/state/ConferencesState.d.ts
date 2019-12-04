@@ -3,7 +3,7 @@ import { SyncClient, SyncMapItem } from "twilio-sync";
 import { ITask } from "../models";
 /**
  * Conference state
- * @name ConferenceState
+ * @interface ConferenceState
  * @property {Conference} source source object of the conference
  * @category State
  */
@@ -12,7 +12,7 @@ export interface ConferenceState {
 }
 /**
  * State for known conferences
- * @name ConferencesState
+ * @interface ConferencesState
  * @property {Map<string, ConferenceState>} states active conferences states by conference SID
  * @category State
  */

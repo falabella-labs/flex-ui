@@ -52,9 +52,11 @@ interface PluginManagerListener {
     uuid: string;
 }
 /**
+ * @class PluginManager
  * @classdesc Flex Plugin Manager
- * @package
- * @category Core
+ * @hideconstructor
+ * @category Core / Manager
+ * @private
  */
 export declare class PluginManager {
     private _manager;
@@ -131,6 +133,7 @@ export declare class PluginManager {
 /**
  * @constant {PluginManager} Plugins Instance of Flex Plugin Manager
  * @category Core
+ * @private
  */
 export declare const Plugins: PluginManager;
 /**

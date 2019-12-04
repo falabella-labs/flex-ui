@@ -1,12 +1,14 @@
-import { Target, LogEntry } from ".";
+import { LogEntry } from ".";
 /**
  * A function that a spy uses to pass on collected data
+ * @category Log Manager
  * @typedef {function} NotifyCallback
  * @param {Log.LogEntry} arg data unit collected by a spy
  * @memberof Log
  */
 export declare type NotifyCallback = (arg: LogEntry) => any;
 /**
+ * @category Log Manager
  * @typedef {function} OnStartCallback
  * @param {any} returnedValue a value returned from the `start` method of a spy
  * @memberof Log
@@ -14,7 +16,7 @@ export declare type NotifyCallback = (arg: LogEntry) => any;
 export declare type OnStartCallback = (returnedValue?: any) => void;
 /**
  * Configurable options common to all spies
- * @package
+ * @category Log Manager
  * @typedef {object} SpyCommonConfigurableOptions
  * @property {Log.Target} [target] an entity that is being tracked by spy
  * @property {string} [targetAlias] an human-readable description of a target
@@ -22,12 +24,12 @@ export declare type OnStartCallback = (returnedValue?: any) => void;
  * @memberof Log
  */
 export interface SpyCommonConfigurableOptions {
-    target?: Target;
+    target?: any;
     targetAlias?: string;
     onStart?: OnStartCallback;
 }
 /**
- * @package
+ * @category Log Manager
  * @typedef {object} SpyConstructorOptions
  * @property {NotifyCallback} trigger
  * @mixes SpyCommonConfigurableOptions
@@ -39,11 +41,13 @@ export declare type SpyConstructorOptions = SpyCommonConfigurableOptions & {
 /**
  * A base class to inherit from when creating a spy class for a specific domain.
  * A spy goal is to invoke a trigger function with a payload, containing logged data.
+ * @category Log Manager
  * @memberof Log
+ * @private
  */
 export declare abstract class Spy {
-    protected target: Target;
-    protected targetAlias: string | Target;
+    protected target: any;
+    protected targetAlias: any;
     protected trigger: NotifyCallback;
     protected onStart: OnStartCallback;
     /**

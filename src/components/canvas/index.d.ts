@@ -1,4 +1,5 @@
 export { IncomingTaskCanvas, IncomingTaskCanvasProps, IncomingTaskCanvasActions } from "./IncomingTaskCanvas";
+export { ConnectingOutboundCallCanvas, ConnectingOutboundCallCanvasProps, ConnectingOutboundCallCanvasActions } from "./ConnectingOutboundCallCanvas";
 export { NoTasksCanvas } from "./NoTaskCanvas";
 export { CallCanvas, CallCanvasActions } from "./CallCanvas";
 export { TaskCanvas, TaskCanvasChildrenProps } from "./TaskCanvas";

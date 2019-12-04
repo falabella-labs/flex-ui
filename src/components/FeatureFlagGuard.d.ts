@@ -7,7 +7,7 @@ interface OwnProps {
     disabledComponent?: React.ReactElement;
 }
 interface StateProps {
-    feature: Feature;
+    feature?: Feature;
 }
 declare type FeatureFlagGuardProps = OwnProps & StateProps;
 export declare class FeatureFlagGuardComponent extends React.Component<FeatureFlagGuardProps> {

@@ -6,8 +6,10 @@ import { NoTasksCanvasThemeProps } from "./canvas/NoTaskCanvas/NoTasksCanvas";
 import { ParticipantsCanvasThemeProps } from "./canvas/ParticipantsCanvas/ParticipantsCanvas.definitions";
 import { TaskCanvasThemeProps } from "./canvas/TaskCanvas/TaskCanvas.definitions";
 import { TaskCanvasThemeProps as SupervisorTaskCanvasThemeProps } from "./supervisor/TaskCanvas/TaskCanvas";
+import { OutboundDialerPanelThemeProps } from "./OutboundDialerPanel/OutboundDialerPanel.definition";
 import { TaskDetailsPanelThemeProps } from "./canvas/TaskDetailsPanel/TaskDetailsPanel.definitions";
 import { TaskInfoPanelThemeProps } from "./canvas/TaskInfoPanel/TaskInfoPanel.definitions";
+import { ConnectingOutboundCallCanvasThemeProps } from "./canvas/ConnectingOutboundCallCanvas/ConnectingOutboundCallCanvas.definitions";
 export interface ChannelColors {
     inactive: string;
     call: string;
@@ -33,10 +35,10 @@ export interface BaseThemeColors {
     agentOfflineColor: string;
 }
 /**
- * Theme interface
- *
+ * Theme options. Material UI theme options are also valid - see {@link https://material-ui.com/customization/themes/}
+ * @category Theme
  * @interface Theme
- * @extends {ControlsTheme}
+ * @property {CoreThemeColors | BaseThemeColors} colors theme colors
  */
 export interface Theme extends ControlsTheme {
     colors: CoreThemeColors & BaseThemeColors;
@@ -80,6 +82,7 @@ export interface Theme extends ControlsTheme {
         WrapupTaskButton: ButtonThemeProps;
     };
     IncomingTaskCanvas: IncomingTaskCanvasThemeProps;
+    ConnectingOutboundCallCanvas: ConnectingOutboundCallCanvasThemeProps;
     CallCanvas: CallCanvasThemeProps;
     TaskInfoPanel: TaskInfoPanelThemeProps;
     TaskDetailsPanel: TaskDetailsPanelThemeProps;
@@ -176,6 +179,7 @@ export interface Theme extends ControlsTheme {
         Button: CSSProps;
         Panel: CSSProps;
     };
+    OutboundDialerPanel: OutboundDialerPanelThemeProps;
 }
 declare const _default: import("react-emotion").CreateStyled<Theme>;
 export default _default;

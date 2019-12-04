@@ -4,7 +4,7 @@ import { ITask } from "../models";
  * @typedef VoiceActionPayload
  * @property {ITask} [task]
  * @property {string} [sid]
- * @memberof VoiceActions
+ * @memberof Actions
  */
 export interface VoiceActionPayload {
     task?: ITask;
@@ -14,17 +14,11 @@ export interface VoiceActionPayload {
  * @package
  * @typedef {VoiceActionPayload} VoiceActionCallHoldPayload
  * @property {string} holdCallMusicUrl
- * @memberof VoiceActions
+ * @memberof Actions
  */
 export interface VoiceActionCallHoldPayload extends VoiceActionPayload {
     holdCallMusicUrl?: string;
 }
-/**
- * @package
- * @class VoiceActions
- * @hideconstructor
- * @category Actions
- */
 export declare class VoiceActions {
     static registerActions(): void;
     private static toggleMute;

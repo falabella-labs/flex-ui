@@ -174,7 +174,7 @@ export declare type TaskChannelNotificationOptions = {
  * @property {Array<TaskChannelDefinition.TaskChannelComponentRemoveRequest>} [removedComponents] component removal request for task channel
  * @property {Object} componentProps Object of task-channel specific components props
  * @property {TaskChannelNotificationOptions} [notifications] Notification properties
- * @category Framework
+ * @category Framework / Channels
  */
 export interface TaskChannelDefinition {
     _registrationCallbacks?: Array<Function>;
@@ -191,6 +191,11 @@ export interface TaskChannelDefinition {
     };
     templates?: {
         IncomingTaskCanvas?: {
+            titleLine?: TaskStatusBasedType<string>;
+            firstLine?: TaskStatusBasedType<string>;
+            secondLine?: TaskStatusBasedType<string>;
+        };
+        ConnectingOutboundCallCanvas?: {
             titleLine?: TaskStatusBasedType<string>;
             firstLine?: TaskStatusBasedType<string>;
             secondLine?: TaskStatusBasedType<string>;
@@ -216,6 +221,9 @@ export interface TaskChannelDefinition {
         };
         TaskInfoPanel?: {
             content: TaskStatusBasedType<string>;
+        };
+        TaskCanvasTabs?: {
+            contentTabHeader?: TaskStatusBasedType<string>;
         };
         Supervisor?: {
             TaskCanvasHeader?: {

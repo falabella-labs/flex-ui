@@ -1,0 +1,1 @@
+export { ConnectingOutboundCallIcon } from "./ConnectingOutboundCallIcon";

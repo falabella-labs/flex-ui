@@ -1,25 +1,24 @@
 import { LogEntry } from "../spies";
 import { Storage } from "./Storage";
 /**
- * @package
- * @typedef {object} LocalStorageSpecificOptions
+ * @typedef {object} Log.LocalStorageSpecificOptions
  * @property {string} [identifier]
- * @memberof Log
  */
 declare type LocalStorageSpecificOptions = {
     identifier?: string;
 };
 /**
- * @typedef {object} LocalStorageOptions
+ * @typedef {object} Log.LocalStorageOptions
  * @mixes Log.LocalStorageSpecificOptions
- * @memberof Log
  */
 export declare type LocalStorageOptions = LocalStorageSpecificOptions;
 export declare type LocalStorageConstructorOptions = LocalStorageSpecificOptions;
 /**
  * An implementations that stores information in the local storage
- * @class LocalStorage
- * @extends {Storage}
+ * @category Log Manager / Storages
+ * @extends Log.Storage
+ * @hideconstructor
+ * @private
  */
 export declare class LocalStorage extends Storage {
     static calculateUsedSpace(data: string): number;

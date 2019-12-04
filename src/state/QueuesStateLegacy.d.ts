@@ -57,9 +57,7 @@ export declare class Actions {
     private static fetchedQueuesList;
     static dispatcher: Dispatch<any>;
     static startPolling(): Promise<void>;
-    static handleFetchedQueues(): Promise<void | {
-        type: string;
-    }>;
+    static handleFetchedQueues(): Promise<void>;
     static stopPolling(): void;
     private static fetchTaskQueuesList;
     private static fetchTaskQueueRealTimeStats;

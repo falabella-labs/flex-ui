@@ -15,10 +15,10 @@ import * as RouterReducer from "./state/RouterState";
  *     applyFlexMiddleware()
  *   )
  * );
- *
  * @param {AppState} state state of the application
  * @param {RouterReducer.RootAction} action dispatched action
  * @returns {AppState} Flex state
- * @category Core
+ * @method FlexReducer
+ * @memberof Store
  */
 export declare const FlexReducer: (state: AppState, action: RouterReducer.RootAction) => AppState;

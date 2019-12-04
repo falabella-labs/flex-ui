@@ -25,6 +25,7 @@ export declare enum CallMonitoringStatus {
  * Call monitoring state
  * @typedef CallMonitoring
  * @property {string} [taskSid] SID of a task that is being monitored
+ * @memberof SupervisorState
  */
 export interface CallMonitoring {
     readonly status: CallMonitoringStatus;
@@ -32,8 +33,8 @@ export interface CallMonitoring {
 }
 /**
  * State of the supervisor view
- * @name SupervisorState
- * @property {CallMonitoring} callMonitoring state of call monitoring
+ * @interface SupervisorState
+ * @property {SupervisorState.CallMonitoring} callMonitoring state of call monitoring
  * @property {SupervisorWorkerState} [stickyWorker] currently selected worker state
  * @property {Array<SupervisorWorkerState>} [workers] currently showing worker states
  * @category State

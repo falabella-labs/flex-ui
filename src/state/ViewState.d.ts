@@ -5,6 +5,7 @@ import { ApplyListFiltersPayload } from "../actions/GeneralActions";
 /**
  * Filter condition
  * @enum { "IN" | "NOT_IN" | "CONTAINS" } FilterConditions
+ * @memberof TeamsView
  * @property {"IN"} IN
  * @property {"NOT_IN"} NOT_IN
  * @property {"CONTAINS"} CONTAINS
@@ -16,9 +17,9 @@ export declare enum FilterConditions {
 }
 /**
  * Active filter
- * @typedef ActiveFilter
+ * @typedef TeamsView.ActiveFilter
  * @property {string} name name of the field to filter against
- * @property {FilterConditions} condition condition to use for the filter
+ * @property {TeamsView.FilterConditions} condition condition to use for the filter
  * @property {Array<string> | string} values value or an array of values to filter
  */
 export interface ActiveFilter {
@@ -28,7 +29,7 @@ export interface ActiveFilter {
 }
 /**
  * Filters state
- * @typedef {Object} FiltersState
+ * @typedef {Object} TeamsView.FiltersState
  * @property {ActiveFilters} [key] active filters by key
  */
 export interface FiltersState {
@@ -36,6 +37,7 @@ export interface FiltersState {
 }
 /**
  * @classdesc Describes the state of active filter
+ * @private
  */
 export declare class ActiveFilters {
     filters: Array<ActiveFilter>;
@@ -59,14 +61,15 @@ export declare class ActiveFilters {
 }
 /**
  * State of the view
- * @name ViewState
+ * @name TeamsView.ViewState
  * @property {string} [activeView] name of the currently active view
  * @property {Object} [componentViewStates] component view states by component key
- * @property {FiltersState} [filters] Represents the list of active filters.
+ * @property {TeamsView.FiltersState} [filters] Represents the list of active filters.
  * @category State
  */
 export interface ViewState {
     readonly isSideNavOpen: boolean;
+    readonly isOutboundDialerOpen: boolean;
     readonly activeView?: string;
     readonly selectedTaskSid?: string;
     readonly selectedTaskInSupervisorSid?: string;
@@ -81,6 +84,7 @@ export interface ViewStateAction extends Action {
     readonly payload?: any;
 }
 export declare const ACTION_TOGGLE_SIDEBAR = "VIEW_TOGGLE_SIDEBAR";
+export declare const ACTION_TOGGLE_OUTBOUND_DIALER = "VIEW_TOGGLE_OUTBOUND_DIALER";
 export declare const ACTION_UPDATE_VIEW = "VIEW_UPDATE";
 export declare const ACTION_UPDATE_FILTER = "VIEW_UPDATE_FILTER";
 export declare const ACTION_DELETE_FILTER = "VIEW_DELETE_FILTER";
@@ -96,6 +100,7 @@ export declare class Actions {
     static dispatcher: Dispatch<any>;
     static setComponentState(name: string, state: any): void;
     static deleteComponentState(name: string): void;
+    static toggleOutboundDialer(): void;
     static toggleSidebar(): void;
     static hideSidebar(): void;
     static showSidebar(): void;

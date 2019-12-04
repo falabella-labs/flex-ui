@@ -1,6 +1,5 @@
 import * as React from "react";
 import { IWorker } from "../../models";
-export * from "./WorkerCanvas.Components";
 /**
  * Properties of Worker Canvas.
  * @typedef WorkerCanvas.WorkerCanvasProps

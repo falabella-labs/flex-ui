@@ -7,6 +7,7 @@ export declare const Content: DynamicContentStore;
 export interface QueuesStatsViewImplStateProps {
     isLoading: boolean;
     hasNoData: boolean;
+    error?: Error;
 }
 export declare type QueuesStatsViewImplOwnProps = ViewAdditionalProps & {
     context?: FlexContextType;

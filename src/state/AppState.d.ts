@@ -14,8 +14,8 @@ import { QueuesStateInterface as QueuesStateInterfaceLegacy } from "./QueuesStat
 import { FeatureFlagsState } from "./FeatureFlags";
 /**
  * Root Redux Flex application state
- * @name AppState
- * @property {Config} config configuration state
+ * @interface AppState
+ * @property {Configuration.AppConfiguration} config configuration state
  * @property {SessionState} session session state
  * @property {ChatState} chat chat state
  * @property {WorkerState} worker worker state

@@ -10,7 +10,7 @@ export interface PhoneCallState {
 }
 /**
  * Voice connection state
- * @name PhoneState
+ * @interface PhoneState
  * @property {PhoneCallState} connection - active connection
  * @category State
  */

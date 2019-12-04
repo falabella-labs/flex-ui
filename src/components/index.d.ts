@@ -1,5 +1,6 @@
 import * as Supervisor from "./supervisor";
 import * as QueuesStats from "./queuesStats";
+import * as Insights from "./Insights";
 export * from "@twilio/frame-ui";
 export * from "./context";
 export * from "./canvas";
@@ -9,8 +10,15 @@ export * from "./view";
 export * from "./queuesStatsLegacy";
 export { Supervisor };
 /**
+ * A collection of components and type definitions related to Flex Insights.
+ * @namespace Insights
+ * @category Insights
+ */
+export { Insights };
+/**
  * A collection of components and type definitions related to realtime queues statistics, accessible in Flex.QueuesStats namespace.
  * @namespace QueuesStats
+ * @private see https://issues.corp.twilio.com/browse/FLEXUI-793 for more details on why its private
  */
 export { QueuesStats };
 export { WorkersDataTable, WorkersDataTable as AgentsDataTable, // kept for backwards compatibility

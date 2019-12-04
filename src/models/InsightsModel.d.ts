@@ -108,7 +108,7 @@ export declare class InsightsTask implements ITask {
 export declare class InsightsWorker implements IWorker<InsightsWorkerData> {
     private _source;
     constructor(source: InsightsWorkerData);
-    private static _availabilityByNameCache;
+    private static availabilityByNameCache;
     readonly source: InsightsWorkerData;
     readonly sid: string;
     readonly name: string;

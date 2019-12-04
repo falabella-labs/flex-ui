@@ -2,6 +2,7 @@ import { Action, Dispatch } from "redux";
 import { SSOLoginHandler } from "../core/SSOLoginHandler";
 import { SSOTokenPayload } from "../core/SSOLoginHandler.definitions";
 import { WorkerLogoutPayload } from "../actions/WorkerActions";
+import { InsightsServiceStatus } from "../core/Insights/InsightsService.definitions";
 /**
  * Login states
  * @enum {"UNKNOWN" | "LOGGING_IN" | "LOGGED_IN" | "LOGGED_OUT" | "ERROR"} LoginState
@@ -21,15 +22,16 @@ export declare enum LoginState {
 }
 /**
  * Active session state
- * @name SessionState
+ * @interface SessionState
  * @property {string} [identity] identity of a logged in user
  * @property {any} [loginError] last error that occurred when logging in
- * @property {LoginState} [loginState] current state of the session
+ * @property {SessionState.LoginState} [loginState] current state of the session
  * @property {SSOTokenPayload} [ssoTokenPayload] SSO token payload
  * @category State
  */
 export interface SessionState {
     readonly identity: string;
+    readonly insightsServiceStatus: InsightsServiceStatus;
     readonly loginHandler: SSOLoginHandler;
     readonly loginError: any;
     readonly loginState: LoginState;
@@ -45,6 +47,7 @@ export declare class Actions {
     static dispatcher: Dispatch<any>;
     static init(): void;
     static ssoLogin(loginHandler: SSOLoginHandler): Promise<void>;
+    static updateInsightsServiceStatus(status: InsightsServiceStatus): void;
     private static handleTokenUpdated;
     private static handleTokenExpired;
     private static initClients;

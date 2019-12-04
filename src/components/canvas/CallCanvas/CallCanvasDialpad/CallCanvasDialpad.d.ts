@@ -1,7 +1,14 @@
 /// <reference types="hoist-non-react-statics" />
 import * as React from "react";
+import { TaskContextProps } from "../../../context";
 import { CallCanvasDialpadImpl } from "./CallCanvasDialpadImpl";
 import { CallCanvasDialpadProps } from "./CallCanvasDialpad.definitions";
+/**
+ * Properties of children in call canvas dialpad.
+ * @typedef {TaskContextProps} CallCanvasDialpad.CallCanvasDialpadChildrenProps
+ */
+export interface CallCanvasDialpadChildrenProps extends CallCanvasDialpadProps, TaskContextProps {
+}
 /**
  * @classdesc This component renders a dialpad on call canvas.
  * @component

@@ -32,4 +32,5 @@ export declare function getQueuesStateAfterADD_QUEUE(): QueuesStateInterface;
 export declare function getQueuesStateAfterUPDATE_QUEUE(): QueuesStateInterface;
 export declare function getQueuesStateAfterUPDATE_FILTER(filter: QueuesFilterFunction): QueuesStateInterface;
 export declare function getQueuesStateAfterREMOVE_QUEUE(): QueuesStateInterface;
+export declare function getQueuesStateAfterQUEUES_ERRROR(): QueuesStateInterface;
 export declare function getInitialState(): QueuesStateInterface;

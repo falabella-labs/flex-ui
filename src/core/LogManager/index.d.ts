@@ -3,13 +3,14 @@ import { Formatter, PredefinedFormatters, FormatterConfig } from "./formatters";
 import { Storage, PredefinedStorages, StorageConfig } from "./storages";
 import { Transport, PredefinedTransports, TransportConfig } from "./transports";
 /**
- * @interface LogManagerConfig
+ * @category Log Manager
+ * @interface Log.LogManagerConfig
  * @property {string} [identifier] a unique name of the log manager that prevents collected data from overlapping with other log managers
  * @property {Array<Log.SpyConfig>} spies an array of configurations for predefined spies or factories for custom spies
  * @property {Log.StorageConfig} storage a configuration for predefined storage or a factory for custom storage
  * @property {Log.FormatterConfig} formatter a configuration for predefined formatter or a factory for custom formatter
  * @property {Log.TransportConfig} transport a configuration for predefined transport or a factory for custom transport
- * @memberof Log
+ * @private
  */
 export interface LogManagerConfig {
     identifier?: string;
@@ -24,9 +25,12 @@ export interface LogManagerConfig {
  * Log manager has following modules:
  * <br>&nbsp;&nbsp;• {@link Log.Spy Spies}
  * <br>&nbsp;&nbsp;• {@link Log.Storage Storage} – optional, the data will be passed straight to a formatter and then to a transport if a storage is falsy. By default is set to {@link Log.PredefinedStorages PredefinedStorages.LocalStorage}.
- * <br>&nbsp;&nbsp;• {@link Log.Formatter Formatter} – by default is set to {@link Log.PredefinedFormatters PredefinedFormatters.String}.
- * <br>&nbsp;&nbsp;• {@link Log.Transport Transport} – by default is set to {@link Log.PredefinedTransports PredefinedTransports.File}.
- * @memberof Log
+ * <br>&nbsp;&nbsp;• {@link Log.Formatter Formatter} - by default is set to {@link Log.PredefinedFormatters PredefinedFormatters.String}.
+ * <br>&nbsp;&nbsp;• {@link Log.Transport Transport} - by default is set to {@link Log.PredefinedTransports PredefinedTransports.File}.
+ * @category Log Manager
+ * @class Log.LogManager
+ * @hideconstructor
+ * @private
  * @example <caption>Dublicate window.console calls to Rollbar (implying Rollbar is installed according to https://docs.rollbar.com/docs/browser-js) </caption>
  * const myLogManager = new Flex.Log.LogManager({
  *     spies: [
@@ -73,55 +77,61 @@ declare class LogManager {
     private transport;
     private formatter;
     private config;
-    /**
-     * @param {Log.LogManagerConfig} options
-     */
     constructor(options: LogManagerConfig);
     /**
      * Start a log manager and all of it's modules. Invoke spies `start` methods.
      * Only takes effect if `prepare` method's promise has resolved.
-     * @method start
-     * @memberof Log.LogManager
+     * @name start
+     * @function
+     * @returns {void}
      * @instance
+     * @memberof Log.LogManager
      */
     start(): void;
     /**
      * Stop a log manager and all of it's modules. Invokes `stop` method of all spies.
      * Clear the prepare state of a log manager, so it will have to be prepared for a next call of `start` method.
-     * @method stop
-     * @memberof Log.LogManager
+     * @name stop
+     * @function
+     * @returns {void}
      * @instance
+     * @memberof Log.LogManager
      */
     stop(): void;
     /**
      * Retrieve the collected data.
-     * @method flush
-     * @memberof Log.LogManager
+     * @name flush
+     * @function
+     * @returns {void}
      * @instance
+     * @memberof Log.LogManager
      */
     flush(data?: Array<LogEntry>): any;
     /**
      * Indicate whenever a log manager is ready to be started or not
-     * @method isReady
+     * @name isReady
+     * @function
      * @returns {boolean}
-     * @memberof Log.LogManager
      * @instance
+     * @memberof Log.LogManager
      */
     isReady(): any;
     /**
      * Indicate whenever a log manager is started and is gathering logs
-     * @method isLogging
+     * @name isLogging
+     * @function
      * @returns {boolean}
-     * @memberof Log.LogManager
      * @instance
+     * @memberof Log.LogManager
      */
     isLogging(): boolean;
     /**
      * Run necessary preparations so that a log manager can be started
-     * @method prepare
+     * @name prepare
+     * @function
      * @returns {Promise}
-     * @memberof Log.LogManager
      * @instance
+     * @memberof Log.LogManager
      */
     prepare(): Promise<unknown>;
     private setState;

@@ -16,6 +16,7 @@ export declare type QueuesDataTableProps = Omit<QueuesDataTableImplOwnProps, "so
  * @component
  * @hideconstructor
  * @memberof QueuesStats
+ * @private see https://issues.corp.twilio.com/browse/FLEXUI-793 for more details on why its private
  *
  * @param {QueuesStats.QueuesDataTableProps} props - QueuesDataTable props
  * @category Components / Programmable

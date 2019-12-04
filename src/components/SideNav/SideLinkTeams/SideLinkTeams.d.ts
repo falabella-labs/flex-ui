@@ -7,6 +7,7 @@ import { SideLinkItemProps, SideLinkItemChildrenProps } from "../SideLink/SideLi
  * @hideconstructor
  * @category Components / Basic
  * @param {SideLink.SideLinkItemProps} props - Properties to be passed to configure this component.
+ * @private
  */
 export declare class SideLinkTeams extends React.PureComponent<SideLinkItemProps> {
     /**

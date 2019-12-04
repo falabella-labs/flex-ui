@@ -18,3 +18,4 @@ export declare const FlexUiVersionDeprecated = "FlexUiVersionDeprecated";
 export declare const FlexSessionExpired = "FLEX_SESSION_EXPIRED";
 export declare const RequestBrowserNotificationPermissions = "RequestBrowserNotificationPermissions";
 export declare const IncomingTask = "IncomingTask";
+export declare const OutboundCallCanceled = "OutboundCallCanceled";

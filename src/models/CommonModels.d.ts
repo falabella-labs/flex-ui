@@ -22,6 +22,7 @@ export declare type TaskReservationStatus = "pending" | "accepted" | "wrapping" 
  * @property {IWorker} [worker] - The instance of the initiating Worker
  * @property {IQueue} [queue] - Target queue instance
  * @category Core
+ * @private
  */
 export declare class TaskTransfer {
     mode: string;

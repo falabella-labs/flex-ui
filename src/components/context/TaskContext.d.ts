@@ -13,7 +13,7 @@ import { ConferenceState } from "../../state/ConferencesState";
  * @property {ConferenceState} [conference] - Conference state of the task.
  * @property {ChatChannelState.ChannelState} [chatChannel] - Chat channel state of the task.
  * @property {TaskChannelDefinition} [channelDefinition] - Channel definition of the task.
- * @memberof TaskContextSource
+ * @memberof TaskContext
  */
 export interface TaskContextProps {
     task?: ITask;
@@ -25,8 +25,21 @@ export interface TaskContextProps {
 /**
  * Task Context
  *
- * @const {React.Context<TaskContextSource.TaskContextProps>} TaskContext
- * @category Framework
+ * @class TaskContext
+ * @category Framework / Context
+ * @hideconstructor
+ * @param {TaskContext.TaskContextProps} props
+ * @example
+ * import { TaskContext } from "@twilio/flex-ui";
+ * <TaskContext.Consumer>
+ *  {(context) => (
+ *   <MyComponent
+ *     task={context.task}
+ *     call={context.call}
+ *   />
+ *  )}
+ * </TaskContext.Consumer>
+ *
  */
 export declare const TaskContext: React.Context<TaskContextProps>;
 /**
@@ -45,6 +58,7 @@ export interface TaskContextProviderProps {
  * @hideconstructor
  * @param {TaskContextSource.TaskContextProviderProps} props properties to be passed to configure this component.
  * @category Framework
+ * @private
  */
 export declare class TaskContextSource extends React.PureComponent<TaskContextProviderProps & TaskContextProps> {
     render(): JSX.Element;

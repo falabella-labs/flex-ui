@@ -8,7 +8,7 @@ export declare class ToggleLoggingPanel extends React.PureComponent<any, ToggleL
     };
     private modalPopup;
     componentDidMount(): this;
-    handlePageLeave(e: Event): Event;
+    handlePageLeave(e: Event): void;
     handleClick: () => void;
     render(): JSX.Element;
     private renderTriggerButton;

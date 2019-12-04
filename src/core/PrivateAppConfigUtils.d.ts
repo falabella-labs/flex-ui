@@ -15,3 +15,4 @@ export declare function getSSOTokenRefreshUrl(config: SSOConfig, accountSid: str
 export declare function getPluginServiceUrl(config: Config): string;
 export declare function getPublicConfigServiceUrl(accountSid: string, config?: SSOConfig): string;
 export declare function getSessionUrl(config: Config): string;
+export declare function getFlexInsightsIdentityUrl(config: Config): string;

@@ -15,6 +15,7 @@ export interface TaskContextProviderProps {
  * @hideconstructor
  * @param {SupervisorTaskContextSource.TaskContextProviderProps} props properties to be passed to configure this component.
  * @category Framework
+ * @private
  */
 export declare class SupervisorTaskContextSource extends React.PureComponent<TaskContextProviderProps & TaskContextProps> {
     render(): JSX.Element;

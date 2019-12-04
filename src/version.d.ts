@@ -1,4 +1,4 @@
 /**
  * @constant {string} VERSION Flex version
  */
-export declare const VERSION = "1.14.1";
+export declare const VERSION = "1.15.1";

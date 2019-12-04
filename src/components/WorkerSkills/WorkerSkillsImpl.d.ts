@@ -26,7 +26,6 @@ export declare class WorkerSkillsImpl extends React.PureComponent<WorkerSkillsPr
     private handleSaveClick;
     private handleCancelClick;
     private static getSkillsFromWorker;
-    private handleSkillAdd;
     private handleSkillUpdate;
     private handleSkillRemove;
 }

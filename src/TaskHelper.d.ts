@@ -3,7 +3,7 @@ import { ITask } from "./models";
 import { ConferenceParticipant } from "./state/ConferencesState";
 /**
  * @classdesc Helper class for tasks
- * @category Framework
+ * @category Helpers
  */
 export declare class TaskHelper {
     private task;
@@ -18,7 +18,8 @@ export declare class TaskHelper {
      *
      * @readonly
      * @deprecated
-     * @type {TaskHelper.ChatMessageHelper}
+     * @return ChatMessageHelper
+     * @private
      */
     readonly lastChatMessage: ChatMessageHelper;
     /**
@@ -26,6 +27,10 @@ export declare class TaskHelper {
      *
      * @readonly
      * @type {ChatChannelHelper}
+     * @example
+     * import { TaskHelper } from "@twilio/flex-ui";
+     * const taskHelper = new TaskHelper(someTask);
+     * console.log(taskHelper.chat);
      */
     readonly chat: ChatChannelHelper;
     /**
@@ -33,6 +38,10 @@ export declare class TaskHelper {
      *
      * @readonly
      * @type {string}
+     * @example
+     * import { TaskHelper } from "@twilio/flex-ui";
+     * const taskHelper = new TaskHelper(someTask);
+     * console.log(taskHelper.durationSinceUpdate);
      */
     readonly durationSinceUpdate: string;
     /**
@@ -40,6 +49,10 @@ export declare class TaskHelper {
      *
      * @readonly
      * @type {string}
+     * @example
+     * import { TaskHelper } from "@twilio/flex-ui";
+     * const taskHelper = new TaskHelper(someTask);
+     * console.log(taskHelper.durationSinceUpdateShort);
      */
     readonly durationSinceUpdateShort: string;
     readonly jsonString: string;
@@ -209,4 +222,12 @@ export declare class TaskHelper {
      * @returns {boolean}
      */
     static isTaskAccepted(task: ITask): boolean;
+    /**
+     * Returns true if task is as outbound call task
+     *
+     * @static
+     * @param {ITask} task
+     * @returns {boolean}
+     */
+    static isOutboundCallTask(task: ITask): boolean;
 }

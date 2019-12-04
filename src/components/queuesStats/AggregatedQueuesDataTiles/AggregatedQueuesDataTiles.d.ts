@@ -26,6 +26,7 @@ export declare type AggregatedQueuesDataTilesChildProps = Omit<AggregatedQueuesD
  * @classdesc Renders a collection of tiles displaying aggregated queues data
  * @component
  * @hideconstructor
+ * @private see https://issues.corp.twilio.com/browse/FLEXUI-793 for more details on why its private
  * @memberof QueuesStats
  *
  * @param {QueuesStats.AggregatedQueuesDataTilesProps} props - AggregatedQueuesDataTiles props

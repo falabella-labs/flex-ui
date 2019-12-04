@@ -6,6 +6,7 @@ export * from "./UserControls.Components";
  * Properties of UserControls.
  * @typedef {object} UserControls.UserControlsChildrenProps
  * @property {WorkerState} [worker] - Worker state.
+ * @private
  */
 export interface UserControlsChildrenProps {
     worker: WorkerState;
@@ -15,6 +16,7 @@ export interface UserControlsChildrenProps {
  * @component
  * @hideconstructor
  * @category Components / Basic
+ * @private
  */
 export declare class UserControls extends React.PureComponent {
     render(): JSX.Element;

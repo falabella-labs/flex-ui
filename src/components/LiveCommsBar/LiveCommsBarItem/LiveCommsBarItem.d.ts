@@ -15,6 +15,7 @@ export interface LiveCommsBarItemChildrenProps extends LiveCommsBarItemProps {
 export interface LiveCommsBarItemProps extends LiveCommsBarChildrenProps {
 }
 /**
+ * @component
  * @classdesc This is a container for LiveCommsBarItem.
  * @param {LiveCommsBar.LiveCommsBarItemProps} props - Properties to be passed to configure this component.
  * @extends {React.PureComponent}

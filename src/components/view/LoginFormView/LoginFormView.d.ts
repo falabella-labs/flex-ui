@@ -5,11 +5,13 @@ import { Config } from "../../../state/AppConfig";
  * @function LoginFormView.onErrorFunction
  * @param {*} error object
  * @return {*}
+ * @private
  */
 /**
  * @function LoginFormView.onSuccessFunction
  * @param {Config} determinedConfig config object
  * @return {*}
+ * @private
  */
 /**
  * LoginFormView properties
@@ -19,6 +21,7 @@ import { Config } from "../../../state/AppConfig";
  * @property {Config} [userConfig] user configuration object
  * @property {string} [initialRuntimeDomain] runtime domain for your Flex application
  * @property {boolean} [userLoggedOut] whether the user is currently logged out or not
+ * @private
  */
 export interface LoginFormViewProps {
     onError?: (error: any) => any;
@@ -33,6 +36,7 @@ export interface LoginFormViewProps {
  * @hideconstructor
  * @param {LoginFormView.LoginFormViewProps} props - props
  * @category Components / Basic
+ * @private
  */
 export declare class LoginFormView extends React.Component<LoginFormViewProps & ThemeProps> {
     /**

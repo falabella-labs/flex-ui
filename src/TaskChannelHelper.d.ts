@@ -3,7 +3,8 @@ import { ITask } from "./models";
 import { TaskStatusBasedType } from "./TaskChannelDefinition";
 /**
  * @classdesc Helper for task channel definitions
- * @category Framework
+ * @hideconstructor
+ * @category Framework / Channels
  */
 export declare class TaskChannelHelper {
     /**
