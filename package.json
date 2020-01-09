@@ -140,7 +140,7 @@
     "gulpclass": "^0.1.2",
     "jest": "^24.8.0",
     "jest-emotion": "^9.2.11",
-    "jest-fetch-mock": "^2.1.1",
+    "jest-fetch-mock": "^3.0.1",
     "jest-localstorage-mock": "^2.4.0",
     "jsdoc": "^3.5.5",
     "jsdom": "^13.2.0",
