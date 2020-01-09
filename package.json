@@ -84,7 +84,7 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
-    "redux-promise-middleware": "4.2.1",
+    "redux-promise-middleware": "6.1.2",
     "reselect": "^4.0.0",
     "semver": "^5.5.0",
     "twilio-chat": "~3.2",
