@@ -136,7 +136,7 @@
     "gulp-copy": "^1.1.0",
     "gulp-json-editor": "^2.3.0",
     "gulp-minify": "^2.1.0",
-    "gulp-typescript": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
     "gulpclass": "^0.1.2",
     "jest": "^24.8.0",
     "jest-emotion": "^9.2.11",
