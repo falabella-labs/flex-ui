@@ -110,7 +110,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-jss": "^8.6.0",
     "@types/react-redux": "^5.0.6",
-    "@types/react-router": "^4.0.31",
+    "@types/react-router": "^5.1.4",
     "@types/react-router-redux": "^5.0.16",
     "@types/redux-logger": "^3.0.6",
     "@types/reselect": "^2.2.0",
