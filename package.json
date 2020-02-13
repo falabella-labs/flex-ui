@@ -86,7 +86,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "6.1.2",
     "reselect": "^4.0.0",
-    "semver": "^5.5.0",
+    "semver": "^7.1.3",
     "twilio-chat": "~3.2",
     "twilio-client": "~1.9",
     "twilio-sync": "^0.11.0",
